@@ -16,7 +16,7 @@ const Form = () => {
 
         return currentyear-birthYear
     }
-    
+
     const data ={
         'firstName': firstName,
         'lastName': lastName,
@@ -98,13 +98,15 @@ return true;
             <input type="password"  required id='confirm-password' onChange={(e)=> setConfirmPassword(e.target.value)} placeholder='Confirm Password' className='rounded-sm p-2 ml-2' />
             </label>
 
-            <select name="role" id="role" required>
-                <option value="none" >Select role</option>
-                <option value="developer">Developer</option>
-                <option value="tester">Tester</option>
-                <option value="manager">Manager</option>
-                <option value=""></option>
-            </select>
+            <select name="role" id="role" required className="rounded-sm p-2 ml-2">
+    <option value="" disabled selected hidden>
+        Select role
+    </option>
+    <option value="developer">Developer</option>
+    <option value="tester">Tester</option>
+    <option value="manager">Manager</option>
+</select>
+
 
 
         <button type='submit' className='px-2 py-1 bg-blue-500 text-white font-bold rounded-md h-12' >submit</button>
